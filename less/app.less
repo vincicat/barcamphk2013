@@ -66,8 +66,8 @@ body {
 			line-height: 26px;
 		}
 	}
-	#cover-txt {
-		background: url(../img/cover_txt.png) 50% 0 no-repeat fixed;
+	#cover-txt { //Logo text
+		background: url(../img/cover_txt.png) 50% -10px no-repeat fixed;
 		.background-size(auto 100%);
 		z-index: 140;
 	}
@@ -84,13 +84,33 @@ body {
 		z-index: 100;
 	}
 }
-#reg {
+#reg, .reg-btn {
 	margin-left: 12px;
 	a {
 		color: white;
 		background: @mainColor;
 		.border-radius(4px);
 		text-shadow: none;
+	}
+}
+.regbar {
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	margin: 1em 0 1em -1em;
+	padding: 1em 2em;
+	text-align: right;
+	display: none;
+
+	a {
+		color: rgba(1, 29, 71, 0.7);
+		text-shadow:none;
+	}
+	.reg-btn {
+		a {
+			display: inline-block;
+			padding: 9px 15px;
+			color: white;
+		}
 	}
 }
 .clear {
@@ -525,18 +545,36 @@ nav {
 	footer {
 		display: none;
 	}
+	#cover #cover-desc {
+			top: 120px;
+			left: 15px;
+			text-shadow: 1px 1px rgba(0,0,0,0.65);
+	}
 }
 @media (max-width: 640px) {
 	#cover {
+		// display: none;
+	}
+	.regbar {
+		display: block;
+	}
+	#follow {
 		display: none;
 	}
 }
-@media (max-height: 720px) {
-	#cover {
+@media (max-height: 540px) {
+	
 		#cover-desc {
 			bottom: 0px;
 		}
-	}
+	
+}
+@media (max-height: 320px) {
+	
+		#cover-desc {
+			
+		}
+	
 }
 @media only screen and (-moz-min-device-pixel-ratio: 2),
        only screen and (-o-min-device-pixel-ratio: 2/1),
