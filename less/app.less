@@ -21,7 +21,8 @@ body {
 
 .touch {
 	#announcement {
-		display: none;
+		//display: none;
+		text-overflow: ellipsis;
 	}
 	nav.affix {
 		margin-top: 0;
@@ -105,16 +106,16 @@ body {
 	}
 }
 .regbar {
-	background: #fff;
-	background: rgba(255,255,255,0.8);
-	margin: 1em 0 1em -1em;
-	padding: 1em 2em;
-	text-align: right;
+	//background: #fff;
+	//background: rgba(255,255,255,0.8);
 	display: none;
 
 	a {
 		color: rgba(1, 29, 71, 0.7);
 		text-shadow:none;
+	}
+	.regbar-inner {
+		background: #fff;
 	}
 	.reg-btn {
 		a {
@@ -447,8 +448,11 @@ h2 {
 	background: rgba(242, 101, 34, 0.95);
 	a {
 		color: #FFF;
-		text-decoration: underline;
+		text-decoration: none;
 		display: block;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.btn {
 		.border-radius(32px);
@@ -458,7 +462,7 @@ h2 {
 		margin-right: 12px;
 	}
 	.content {
-
+		text-decoration: underline;
 	}
 }
 #desc {
@@ -626,21 +630,36 @@ nav {
 		display: none;
 	}
 	#cover #cover-desc {
-			top: 120px;
-			left: 15px;
-			text-shadow: 1px 1px rgba(0,0,0,0.65);
+		text-shadow: 1px 1px rgba(0,0,0,0.65);
+		top:60px;
+		left:0;
+		height:auto;
+		width:100%;
+		em {
+			padding-left: 1em
+		}
+	}
+	.regbar {
+		display: block;
+
+		margin: 1em 0 1em -1em;
+		text-align: right;
+
+		.regbar-inner {
+			display: inline-block;
+
+			padding: 0.5em 0.8em;
+		}
+	}
+	#follow {
+		display: none;
 	}
 }
 @media (max-width: 640px) {
 	#cover {
 		// display: none;
 	}
-	.regbar {
-		display: block;
-	}
-	#follow {
-		display: none;
-	}
+
 }
 @media (max-height: 540px) {
 	
@@ -649,10 +668,14 @@ nav {
 		}
 	
 }
-@media (max-height: 320px) {
+@media (max-width: 480px) and (orientation: landscape) {
 	
 		#cover-desc {
-			
+			top: 80px;
+		}
+		.regbar .more-btn {
+			//display: block;
+			margin: 0.4em 0.2em 0;
 		}
 	
 }

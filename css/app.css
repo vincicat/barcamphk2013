@@ -39,7 +39,7 @@ body {
   background: #f9f9f9;
 }
 .touch #announcement {
-  display: none;
+  text-overflow: ellipsis;
 }
 .touch nav.affix {
   margin-top: 0;
@@ -135,16 +135,14 @@ body {
   text-shadow: none;
 }
 .regbar {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.8);
-  margin: 1em 0 1em -1em;
-  padding: 1em 2em;
-  text-align: right;
   display: none;
 }
 .regbar a {
   color: rgba(1, 29, 71, 0.7);
   text-shadow: none;
+}
+.regbar .regbar-inner {
+  background: #fff;
 }
 .regbar .reg-btn a {
   display: inline-block;
@@ -486,8 +484,10 @@ h2 {
 }
 #announcement a {
   color: #FFF;
-  text-decoration: underline;
+  text-decoration: none;
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #announcement .btn {
   -webkit-border-radius: 32px;
@@ -497,6 +497,9 @@ h2 {
 #announcement img {
   background: url(../img/follow_icons.png) 0 -83px no-repeat;
   margin-right: 12px;
+}
+#announcement .content {
+  text-decoration: underline;
 }
 #desc {
   background: url(../img/cover2.jpg) 50% 0 no-repeat fixed;
@@ -639,26 +642,43 @@ nav:after {
     display: none;
   }
   #cover #cover-desc {
-    top: 120px;
-    left: 15px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.65);
+    top: 60px;
+    left: 0;
+    height: auto;
+    width: 100%;
   }
-}
-@media (max-width: 640px) {
+  #cover #cover-desc em {
+    padding-left: 1em;
+  }
   .regbar {
     display: block;
+    margin: 1em 0 1em -1em;
+    text-align: right;
+  }
+  .regbar .regbar-inner {
+    display: inline-block;
+    padding: 0.5em 0.8em;
   }
   #follow {
     display: none;
   }
+}
+@media (max-width: 640px) {
+  
 }
 @media (max-height: 540px) {
   #cover-desc {
     bottom: 0px;
   }
 }
-@media (max-height: 320px) {
-  
+@media (max-width: 480px) and (orientation: landscape) {
+  #cover-desc {
+    top: 80px;
+  }
+  .regbar .more-btn {
+    margin: 0.4em 0.2em 0;
+  }
 }
 @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   nav .navbar .brand {
