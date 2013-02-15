@@ -38,12 +38,21 @@ body {
   min-height: 2000px;
   background: #f9f9f9;
 }
+.touch #announcement {
+  display: none;
+}
+.touch nav.affix {
+  margin-top: 0;
+}
 .touch #cover {
   background-attachment: scroll;
 }
 .touch #cover > div {
   background-attachment: scroll!important;
   overflow: hidden;
+}
+.touch .nav #nav-announce {
+  display: block;
 }
 .touch #desc {
   background-attachment: scroll;
@@ -286,13 +295,18 @@ body {
 }
 #schedule h1 {
   color: white;
+  margin-bottom: 12px;
+}
+#schedule p {
+  color: #f3f3f3;
 }
 #schedule .schedule-block {
   position: relative;
   padding: 6px 12px;
 }
 #schedule h4 {
-  display: inline;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #a0410d;
 }
 #schedule a {
   color: white;
@@ -308,6 +322,9 @@ body {
 }
 .touch #follow {
   display: none;
+}
+.touch nav #nav-announce {
+  display: block;
 }
 #follow {
   position: fixed;
@@ -342,9 +359,25 @@ body {
 #follow a.twitter {
   background-position: 0 -28px;
 }
+#follow a.announcement {
+  background-position: 0 -84px;
+}
 #follow .tooltip {
   min-width: 198px;
   font-size: 14px;
+}
+#announce-modal h4 {
+  color: #f26522;
+}
+#announce-modal li {
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 22px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
+}
+#announce-modal img {
+  margin-bottom: 12px;
 }
 #sponsors {
   background: url(../img/grid.png) 0 0 repeat scroll;
@@ -437,6 +470,34 @@ h2 {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+#announcement {
+  padding: 6px 12px;
+  font-size: 13px;
+  height: auto!important;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9990;
+  background: rgba(242, 101, 34, 0.95);
+}
+#announcement a {
+  color: #FFF;
+  text-decoration: underline;
+  display: block;
+}
+#announcement .btn {
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
+}
+#announcement img {
+  background: url(../img/follow_icons.png) 0 -83px no-repeat;
+  margin-right: 12px;
+}
 #desc {
   background: url(../img/cover2.jpg) 50% 0 no-repeat fixed;
   -webkit-background-size: cover;
@@ -451,9 +512,12 @@ h2 {
   color: white;
   margin-bottom: 12px;
 }
+#nav-announce {
+  display: none;
+}
 nav {
   width: 100%;
-  height: 100px;
+  height: 75px;
   background: #fff;
   position: relative;
   top: 0;
@@ -464,8 +528,11 @@ nav {
 nav .lang {
   display: none;
 }
+nav #nav-announce {
+  display: none;
+}
 nav .navbar {
-  margin-top: 22px;
+  margin-top: 8px;
 }
 nav .navbar .navbar-inner {
   padding: 0;
@@ -479,6 +546,7 @@ nav .navbar .navbar-inner {
 }
 nav .navbar .nav {
   float: right;
+  margin-top: 6px;
 }
 nav .navbar .nav li a {
   text-transform: upper;
@@ -495,6 +563,9 @@ nav .navbar .brand {
   margin: 0 0 0 28px;
   height: 50px;
   overflow: hidden;
+}
+nav .navbar .brand img {
+  height: 50px;
 }
 nav:after {
   content: "";
@@ -581,10 +652,13 @@ nav:after {
     display: none;
   }
 }
-@media (max-height: 600px) {
+@media (max-height: 540px) {
   #cover-desc {
     bottom: 0px;
   }
+}
+@media (max-height: 320px) {
+  
 }
 @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   nav .navbar .brand {

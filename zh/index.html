@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh-hk"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="zh-hk"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="zh-hk"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hk"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>BarCamp Hong Kong 2013</title>
+        <title>Barcamp 香港 2013</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-        <meta property="og:title" content="BarCamp Hong Kong 2013" />
+        <meta property="og:title" content="BarCamp 香港 2013" />
         <meta property="og:type" content="activity" />
         <meta property="og:url" content="http://www.barcamp.hk" />
         <meta property="og:image" content="http://barcamp.hk/facebook.jpeg" />
-        <meta property="og:site_name" content="BarCamp Hong Kong 2013" />
-        <meta property="og:description" content="BarCamp Hong Kong 2013 - The Biggest Unconference in Hong Kong" />
+        <meta property="og:site_name" content="BarCamp 香港 2013" />
+        <meta property="og:description" content="BarCamp 香港 2013 - 香港最大型反傳統、由參與者主導的即席研討會" />
         <meta name="author" content="Created by Foak Productions Limited(www.thefoakhouse.com) / bugs go to admin@barcamp.hk please">
 
         <link rel="shortcut icon" href="../favicon.ico">
@@ -32,6 +32,12 @@
         <![endif]-->
 
         <div id="main">
+            <div id="announcement">
+                <a data-toggle="modal" href="#announce-modal">
+                    <b><img src="../img/spacer2.gif" width="28" height="28" alt="Announcement"></b>
+                    <span style="display:none;" class="content"></span>
+                </a>
+            </div>
              <section id="cover">
                 <div id="cover-desc">
                     <em>
@@ -49,9 +55,7 @@
                             <div class="navbar-inner">
                                 <div class="container">
                                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
+                                        <span class="icon-list"></span>
                                     </a>
                                     <a class="brand" href="/"><img src="../img/spacer2.gif" alt="BarCamp 2013" width="158" height="50"></a>
                                     <div class="nav-collapse">
@@ -60,6 +64,7 @@
                                             <li><a href="#wheres">何時何地</a></li>
                                             <li><a href="#schedule">流程</a></li>
                                             <li><a href="#organizers">主辦者</a></li>
+                                            <li id="nav-announce"><a href="#announce-modal" data-toggle="modal">公告</a></li>
                                             <li><a href="http://wall.barcamp.hk" target="_blank">Wall</a></li>
                                             <li class="lang"><a href="../">English</a></li>
                                             <li id="reg"><a target="_blank" href="http://barcamphk2013.eventbrite.com/">參加者登記</a></li>
@@ -197,6 +202,7 @@ gurteen.nsf/id/X004395C6/" target="_blank">「雙腳定律」</a>。</p>
                  <section id="schedule">
                      <div class="container">
                         <h1>流程</h1>
+                        <p>我們仍在研究細節，以下是一向已來BarCamp的流程：</p>
                         <div class="row">
                             <div class="span4">
                                 <div class="schedule-block">
@@ -239,9 +245,9 @@ gurteen.nsf/id/X004395C6/" target="_blank">「雙腳定律」</a>。</p>
                             </div>
                             <div class="span4">
                                 <div class="schedule-block">
-                                    <h4>聯誼一下</h4>
+                                    <h4>聯誼一下 (活動第一天，於<a href="http://www.hkcocoon.org" target="_blank">浩觀</a>舉行)</h4>
                                     <div class="clear"><!-- Empty --></div>
-                                    <p>能稱為Barcamp豈能無酒Bar？</p>
+                                    <p>能稱為BarCamp豈能無酒Bar？謝謝<a href="http://www.hkcocoon.org" target="_blank">浩觀</a>的贊助！</p>
                                 </div>
                             </div>
                         </div>
@@ -311,7 +317,7 @@ gurteen.nsf/id/X004395C6/" target="_blank">「雙腳定律」</a>。</p>
                                 <a href="https://twitter.com/share" class="twitter-share-button"
                                     data-url="http://www.barcamp.hk"
                                     data-via="Barcamphk"
-                                    data-text="BarCamp Hong Kong 2012 - It's coming!"
+                                    data-text="BarCamp Hong Kong 2013 - It's coming!"
                                     data-related="Barcamphk"
                                     data-count="horizontal">Tweet</a>
                             </div>
@@ -333,8 +339,11 @@ gurteen.nsf/id/X004395C6/" target="_blank">「雙腳定律」</a>。</p>
             </div>
         </div>
         <div id="follow">
-            <a rel="tooltips" data-placement="left" data-original-title="BarCamp Hong Kong 2013" href="http://www.barcamp.hk">
-                <img src="../img/spacer2.gif" width="28" height="28" alt="BarCamp 2013 Hong Kong">
+            <a rel="tooltips" data-placement="left" data-original-title="BarCamp 2013 香港" href="http://www.barcamp.hk">
+                <img src="../img/spacer2.gif" width="28" height="28" alt="BarCamp 2013 香港">
+            </a>
+            <a rel="tooltips" data-placement="left" data-original-title="公告" class="announcement" data-toggle="modal" role="button" href="#announce-modal">
+                <img src="../img/spacer2.gif" width="28" height="28" alt="公告">
             </a>
             <a rel="tooltips" data-placement="left" data-original-title="Follow us on Faceboook" class="facebook" href="http://www.facebook.com/BarCampHongKong" target="_blank">
                 <img src="../img/spacer2.gif" width="28" height="28" alt="Follow us on Facebook">
@@ -344,6 +353,15 @@ gurteen.nsf/id/X004395C6/" target="_blank">「雙腳定律」</a>。</p>
             <a href="../" style="background-image:none;">
                 EN
             </a>
+        </div>
+        <div class="modal hide fade" id="announce-modal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="title">公告</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list"></ul>
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
